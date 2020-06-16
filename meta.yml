@@ -1,0 +1,46 @@
+{% set data = load_setup_py_data(setup_file='./setup.py', from_recipe_dir=True) %}
+
+package:
+  name: {{ data.name }}
+  version: {{ data.version }}
+
+source:
+  path: ../ose-workbench-core
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - freecad ==0.18.4
+    - pip
+    - python
+
+  run:
+    - freecad ==0.18.4
+    - pip
+    - python
+
+test:
+  imports:
+    - osecore
+    - osecore.app
+    - osecore.app.attachment
+    - osecore.app.cut_list
+    - osecore.app.shape
+    - osecore.gui
+    - osecore.gui.cut_list
+    - osecore.gui.selection
+
+about:
+  home: https://github.com/gbroques/ose-workbench-core
+  license: GNU General Public License v2 or later (GPLv2+)
+  license_file: LICENSE
+  summary: "Core library common to all OSE workbenches."
+  doc_url: https://ose-workbench-core.readthedocs.io/en/latest/
+  dev_url: https://github.com/gbroques/ose-workbench-core
+
+extra:
+  recipe-maintainers:
+    - gbroques

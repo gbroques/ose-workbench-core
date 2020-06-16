@@ -1,0 +1,8 @@
+*.pyc
+.vscode/
+.coverage
+htmlcov/
+_build/
+docs/osecore/
+dist/
+*.egg-info

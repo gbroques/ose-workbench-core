@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ose-workbench-core',
-    version='0.1.0',
+    version='0.1.0a1',
     packages=[
         'osecore',
         'osecore.app',

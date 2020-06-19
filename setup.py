@@ -9,6 +9,8 @@ setup(
         'osecore.app.attachment',
         'osecore.app.cut_list',
         'osecore.app.shape',
+        'osecore.app.shape.edge',
+        'osecore.app.shape.face',
         'osecore.gui',
         'osecore.gui.cut_list',
         'osecore.gui.selection'

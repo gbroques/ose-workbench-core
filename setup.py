@@ -1,7 +1,7 @@
 import io
 from os import path
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 version = {}
 with open('osecore/version.py') as fp:
@@ -15,18 +15,7 @@ with io.open(path.join(current_dir, 'README.md'), encoding='utf-8') as f:
 setup(
     name='ose-workbench-core',
     version=version['__version__'],
-    packages=[
-        'osecore',
-        'osecore.app',
-        'osecore.app.attachment',
-        'osecore.app.cut_list',
-        'osecore.app.shape',
-        'osecore.app.shape.edge',
-        'osecore.app.shape.face',
-        'osecore.gui',
-        'osecore.gui.cut_list',
-        'osecore.gui.selection'
-    ],
+    packages=find_packages(exclude=['tests']),
     author='G Roques',
     url='https://github.com/gbroques/ose-workbench-core',
     description='Core library common to all OSE workbenches.',

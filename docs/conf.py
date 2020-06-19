@@ -18,6 +18,8 @@ from osewb.docs import conf
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../'))
 
+from osecore import version as project_version  # noqa: E402
+
 # Shared base configuration for OSE workbench documentation.
 # https://github.com/gbroques/ose-workbench-platform/blob/master/osewb/docs/conf.py
 print("============================================")
@@ -52,7 +54,7 @@ copyright = '2020, G Roques'
 author = 'G Roques'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0a1'
+release = project_version.__version__
 
 
 # -- General configuration ---------------------------------------------------

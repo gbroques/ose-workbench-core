@@ -1,8 +1,13 @@
 from setuptools import setup
 
+version = {}
+with open('osecore/version.py') as fp:
+    exec(fp.read(), version)
+
+
 setup(
     name='ose-workbench-core',
-    version='0.1.0a1',
+    version=version['__version__'],
     packages=[
         'osecore',
         'osecore.app',

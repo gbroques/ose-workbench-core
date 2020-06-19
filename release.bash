@@ -1,10 +1,28 @@
 #!/bin/bash
 # =========================================
 # Convenience script for cutting releases:
-#   * Clean and create dist/
+#   * Find and set version
+#   * Commit, tag, and push version change
 #   * Deploy to PyPi
 #   * Deploy to Anaconda Cloud
 # =========================================
+if [[ $# -eq 0 ]] ; then
+    echo 'Usage: ./release.bash <version> (e.g. 0.2.0)'
+    exit 1
+fi
+
+version=$1
+echo "Modifying version in osecore/version.py to $version"
+sed -E -i "s/'(.*)'/'$version'/g" ./osecore/version.py
+
+set -x
+git add .
+git commit -m "v$version"
+git tag "v$version"
+git push
+git push --tags
+set +x
+
 rm -rf dist/
 python3 setup.py sdist
 

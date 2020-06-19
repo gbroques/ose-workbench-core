@@ -13,29 +13,23 @@ build:
 
 requirements:
   host:
-    - freecad ==0.18.4
     - pip
     - python
 
   run:
-    - freecad ==0.18.4
-    - pip
     - python
+    - freecad ==0.18.4
 
 test:
   imports:
     - osecore
     - osecore.app
-    - osecore.app.attachment
-    - osecore.app.cut_list
-    - osecore.app.shape
     - osecore.gui
-    - osecore.gui.cut_list
-    - osecore.gui.selection
 
 about:
   home: https://github.com/gbroques/ose-workbench-core
   license: GNU General Public License v2 or later (GPLv2+)
+  license_family: LGPL
   license_file: LICENSE
   summary: "Core library common to all OSE workbenches."
   doc_url: https://ose-workbench-core.readthedocs.io/en/latest/
@@ -44,3 +38,4 @@ about:
 extra:
   recipe-maintainers:
     - gbroques
+

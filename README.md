@@ -1,4 +1,9 @@
 # OSE Workbench Core
+[![PyPI version](https://badge.fury.io/py/ose-workbench-core.svg)](https://badge.fury.io/py/ose-workbench-core)
+[![Conda version](https://anaconda.org/gbroques/ose-workbench-core/badges/version.svg)](https://anaconda.org/gbroques/ose-workbench-core)
+[![Build Status](https://travis-ci.org/gbroques/ose-workbench-core.svg?branch=master)](https://travis-ci.org/gbroques/ose-workbench-core)
+[![Documentation Status](https://readthedocs.org/projects/ose-workbench-core/badge/?version=latest)](https://ose-workbench-core.readthedocs.io/en/latest/?badge=latest)
+
 Core library common to all [Open Source Ecology (OSE)](https://www.opensourceecology.org/) workbenches.
 
 ## Contributing

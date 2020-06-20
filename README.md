@@ -3,6 +3,7 @@
 [![Conda version](https://anaconda.org/gbroques/ose-workbench-core/badges/version.svg)](https://anaconda.org/gbroques/ose-workbench-core)
 [![Build Status](https://travis-ci.org/gbroques/ose-workbench-core.svg?branch=master)](https://travis-ci.org/gbroques/ose-workbench-core)
 [![Documentation Status](https://readthedocs.org/projects/ose-workbench-core/badge/?version=latest)](https://ose-workbench-core.readthedocs.io/en/latest/?badge=latest)
+[![Coverage Status](https://coveralls.io/repos/github/gbroques/ose-workbench-core/badge.svg?branch=master)](https://coveralls.io/github/gbroques/ose-workbench-core?branch=master)
 
 Core library common to all [Open Source Ecology (OSE)](https://www.opensourceecology.org/) workbenches.
 

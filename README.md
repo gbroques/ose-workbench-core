@@ -21,4 +21,4 @@ Licensed under the [GNU Lesser General Public License, version 2.1](https://www.
 This is the same license as [FreeCAD](https://wiki.freecadweb.org/Licence) to ensure this code could potentially be incorporated into future FreeCAD modules or FreeCAD source itself.
 
 ## Supported FreeCAD Versions
-This library supports FreeCAD 18.4.
+This library supports FreeCAD 19.

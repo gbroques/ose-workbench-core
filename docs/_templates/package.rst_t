@@ -14,14 +14,14 @@
 {%- endmacro %}
 
 {%- if is_namespace %}
-{{- [pkgname, "namespace"] | join(" ") | e | heading }}
+{{- [pkgname, 'namespace'] | join(' ') | e | heading }}
 {% else %}
 {{ pkgname | heading }}
-{{ automodule(pkgname, automodule_options) }}
-{% endif %}
-
 {%- if subpackages %}
 {{ toctree(subpackages) }}
+{% endif %}
+{% set pkg_module_options = automodule_options + ['imported-members'] %}
+{{ automodule(pkgname, pkg_module_options) }}
 {% endif %}
 
 {%- if submodules %}

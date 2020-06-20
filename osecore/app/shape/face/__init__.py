@@ -1,4 +1,4 @@
-from .is_face_parallel_to_plane import (is_face_parallel_to_xy_plane,
-                                        is_face_parallel_to_xz_plane,
-                                        is_face_parallel_to_yz_plane)
-from .make_face_from_vectors import make_face_from_vectors
+from ._is_face_parallel_to_plane import (is_face_parallel_to_xy_plane,
+                                         is_face_parallel_to_xz_plane,
+                                         is_face_parallel_to_yz_plane)
+from ._make_face_from_vectors import make_face_from_vectors

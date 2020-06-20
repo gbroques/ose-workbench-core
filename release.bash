@@ -12,8 +12,8 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 version=$1
-echo "Modifying version in osecore/version.py to $version"
-sed -E -i "s/'(.*)'/'$version'/g" ./osecore/version.py
+echo "Modifying version in osecore/_version.py to $version"
+sed -E -i "s/'(.*)'/'$version'/g" ./osecore/_version.py
 
 set -x
 git add .

@@ -6,6 +6,11 @@
 
 Core library common to all [Open Source Ecology (OSE)](https://www.opensourceecology.org/) workbenches.
 
+## Documentation
+Documentation is hosted at the following URL:
+
+https://ose-workbench-core.readthedocs.io/en/latest/
+
 ## Contributing
 See [Contributing Guidelines](./CONTRIBUTING.md).
 

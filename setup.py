@@ -4,7 +4,7 @@ from os import path
 from setuptools import find_packages, setup
 
 version = {}
-with open('osecore/version.py') as fp:
+with open('osecore/_version.py') as fp:
     exec(fp.read(), version)
 
 current_dir = path.abspath(path.dirname(__file__))

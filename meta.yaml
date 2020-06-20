@@ -18,7 +18,7 @@ requirements:
 
   run:
     - python
-    - freecad ==0.18.4
+    - freecad ==0.19.alpha2
 
 test:
   imports:

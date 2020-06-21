@@ -23,5 +23,7 @@ Shape is  generic term covering all of the above.
 See Also:
     https://wiki.freecadweb.org/Topological_data_scripting
 """
-from ._place_shape import place_shape, place_shapes
 from ._move_parts import move_parts
+from ._place_shape import place_shape, place_shapes
+
+__all__ = ['move_parts', 'place_shape', 'place_shapes']

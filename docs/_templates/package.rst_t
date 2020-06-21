@@ -20,8 +20,7 @@
 {%- if subpackages %}
 {{ toctree(subpackages) }}
 {% endif %}
-{% set pkg_module_options = automodule_options + ['imported-members'] %}
-{{ automodule(pkgname, pkg_module_options) }}
+{{ automodule(pkgname, automodule_options) }}
 {% endif %}
 
 {%- if submodules %}

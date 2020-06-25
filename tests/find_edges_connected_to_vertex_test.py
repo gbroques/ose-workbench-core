@@ -1,7 +1,7 @@
 import unittest
 
 # Need to import FreeCAD
-import FreeCAD as App
+import FreeCAD as App  # noqa: F401
 import Part
 
 from osecore.app.shape.edge import find_edges_connected_to_vertex

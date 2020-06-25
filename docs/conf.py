@@ -15,10 +15,12 @@ import sys
 
 from osewb.docs import conf
 
+
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../'))
 
-from osecore import _version as project_version  # noqa: E402
+from osecore import _version as project_version  # noqa: E402,I001
+
 
 # Shared base configuration for OSE workbench documentation.
 # https://github.com/gbroques/ose-workbench-platform/blob/master/osewb/docs/conf.py

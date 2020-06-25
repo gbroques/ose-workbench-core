@@ -24,3 +24,6 @@ class Model:
         :type fp: Part::FeaturePython
         """
         self.Object = fp
+
+
+__all__ = ['Model']

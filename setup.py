@@ -1,9 +1,10 @@
 import io
 from os import path
+from typing import Dict
 
 from setuptools import find_packages, setup
 
-version = {}
+version: Dict[str, str] = {}
 with open('osecore/_version.py') as fp:
     exec(fp.read(), version)
 

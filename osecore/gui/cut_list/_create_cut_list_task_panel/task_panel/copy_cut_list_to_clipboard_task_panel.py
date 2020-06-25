@@ -1,6 +1,5 @@
 import FreeCADGui
 from FreeCAD import Console
-
 from osecore.app._cut_list import (convert_dict_list_to_wiki_list_markup,
                                    convert_dict_list_to_wiki_table_markup)
 from PySide import QtGui

@@ -1,6 +1,6 @@
 language: python
 python:
-  - '3.6'
+  - '3.8'
 install:
   - wget https://repo.continuum.io/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh -O miniconda.sh;
   - bash miniconda.sh -b -p $HOME/miniconda
@@ -12,6 +12,6 @@ install:
   - conda activate osecore
   - export PYTHONPATH=$PYTHONPATH:$CONDA_PREFIX/lib
 script:
-    - pytest --cov osecore/ tests/
+    - osewb build
 after_success:
     - coveralls

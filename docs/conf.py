@@ -15,6 +15,7 @@ import sys
 
 from osewb.docs import conf
 
+
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../'))
 

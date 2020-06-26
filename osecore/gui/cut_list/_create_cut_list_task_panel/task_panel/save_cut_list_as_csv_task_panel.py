@@ -2,6 +2,7 @@ import os
 
 import FreeCADGui
 from FreeCAD import Console
+
 from osecore.app._cut_list import write_dict_list_to_csv
 from PySide import QtGui
 

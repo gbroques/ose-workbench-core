@@ -39,7 +39,7 @@ def run_apidoc(app):
         '../osecore',
         '-o', 'osecore',
         '-d', max_depth,
-        '--templatedir=_templates/',
+        '--templatedir={}'.format(conf['templates_path']),
         '--force',
         '--no-toc'
     ])
@@ -67,7 +67,7 @@ release = project_version.__version__
 extensions = conf['extensions']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = [conf['templates_path']]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -92,13 +92,8 @@ remove_app_property_prefix_from_type = conf['ext'][
 # a list of builtin themes.
 html_theme = conf['html_theme']
 
-html_logo = './_static/ose-sticker-logo.svg'
+html_logo = conf['html_logo']
 
 html_css_files = conf['html_css_files']
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
 
 extlinks = conf['ext']['extlinks']['extlinks']

@@ -1,7 +1,8 @@
 from math import degrees
+from typing import List
 
 import Part
-from FreeCAD import Console, Rotation, Vector
+from FreeCAD import Console, Placement, Rotation, Vector
 
 from osecore.app.shape.edge import (find_edges_connected_to_vertex,
                                     is_edge_parallel_to_x_axis,
@@ -9,11 +10,25 @@ from osecore.app.shape.edge import (find_edges_connected_to_vertex,
                                     is_edge_parallel_to_z_axis)
 
 
-def move_parts(parts,
-               placement,
-               origin_translation_offset,
-               reference_dimensions,
-               rotation=Rotation()):
+def move_parts(parts: List[Part.Shape],
+               placement: Placement,
+               origin_translation_offset: Vector,
+               reference_dimensions: List[float],
+               rotation: Rotation = Rotation()) -> None:
+    """Move parts based on placement, origin translation offset,
+    reference dimensions, and optionally a rotation.
+
+    :param parts: List of parts to move.
+    :type parts: List[Part.Shape]
+    :param placement: A placement to apply to the given parts.
+    :type placement: Placement
+    :param origin_translation_offset: Offset the parts to the origin.
+    :type origin_translation_offset: Vector
+    :param reference_dimensions: Reference dimensions
+    :type reference_dimensions: Vector
+    :param rotation: Rotation, defaults to Rotation()
+    :type rotation: Rotation, optional
+    """
     translation_offset = _get_translation_offset(
         reference_dimensions, rotation, origin_translation_offset)
     for part in parts:
@@ -24,9 +39,9 @@ def move_parts(parts,
         part.translate(placement.Base)
 
 
-def _get_translation_offset(reference_dimensions,
-                            rotation,
-                            origin_translation_offset):
+def _get_translation_offset(reference_dimensions: List[float],
+                            rotation: Rotation,
+                            origin_translation_offset: Vector):
     reference_box = Part.makeBox(*reference_dimensions)
     reference_box.rotate(Vector(0, 0, 0), rotation.Axis,
                          degrees(rotation.Angle))

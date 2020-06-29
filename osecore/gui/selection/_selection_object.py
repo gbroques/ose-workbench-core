@@ -1,7 +1,21 @@
+from typing import List, Optional
+
+import FreeCADGui as Gui
+import Part
 from FreeCAD import Console
 
 
-def find_selection_object_by_type(selection_objects, object_type):
+def find_selection_object_by_type(selection_objects: List['Gui.SelectionObject'],
+                                  object_type: str) -> Optional['Gui.SelectionObject']:
+    """Find the first selection object with the given object type.
+
+    :param selection_objects: A list of selection objects returned from ``Gui.Selection.getSelectionEx()``.
+    :type selection_objects: List['Gui.SelectionObject']
+    :param object_type: Type as defined on a model class bound to ``obj.Proxy.Type``.
+    :type object_type: str
+    :return: SelectionObject or ``None`` if object with type is not found in selection.
+    :rtype: Optional[Gui.SelectionObject]
+    """
     return _find_object_by_type(
         selection_objects,
         'selection objects',
@@ -11,15 +25,36 @@ def find_selection_object_by_type(selection_objects, object_type):
     )
 
 
-def find_face_in_selection_object(selection_object):
+def find_face_in_selection_object(selection_object: 'Gui.SelectionObject') -> Optional[Part.Face]:
+    """Find the first face in the given selection object.
+
+    :param selection_object: A given selection object.
+    :type selection_object: Gui.SelectionObject
+    :return: The first face found in the selection object.
+    :rtype: Optional[Part.Face]
+    """
     return _find_sub_object_by_shape_type(selection_object, ShapeType.FACE)
 
 
-def find_edge_in_selection_object(selection_object):
+def find_edge_in_selection_object(selection_object: 'Gui.SelectionObject') -> Optional[Part.Edge]:
+    """Find the first edge in the given selection object.
+
+    :param selection_object: A given selection object.
+    :type selection_object: Gui.SelectionObject
+    :return: The first edge found in the selection object.
+    :rtype: Optional[Part.Edge]
+    """
     return _find_sub_object_by_shape_type(selection_object, ShapeType.EDGE)
 
 
-def find_vertex_in_selection_object(selection_object):
+def find_vertex_in_selection_object(selection_object: 'Gui.SelectionObject') -> Optional[Part.Vertex]:
+    """Find the first vertex in the given selection object.
+
+    :param selection_object: A given selection object.
+    :type selection_object: Gui.SelectionObject
+    :return: The first vertex found in the selection object.
+    :rtype: Optional[Part.Vertex]
+    """
     return _find_sub_object_by_shape_type(selection_object, ShapeType.VERTEX)
 
 

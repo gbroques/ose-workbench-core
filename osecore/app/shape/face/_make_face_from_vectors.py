@@ -1,9 +1,11 @@
 from itertools import tee
+from typing import List
 
 import Part
+from FreeCAD import Vector
 
 
-def make_face_from_vectors(vectors):
+def make_face_from_vectors(vectors: List[Vector]) -> Part.Face:
     """Make a Face from list of vectors.
 
     See Part::TopoShapeFacePy Class Reference:
